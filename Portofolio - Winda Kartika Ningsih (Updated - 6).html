@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winda Kartika Ningsih - Software Engineer Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome untuk ikon teknologi -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#090412',
+                        cardBg: 'rgba(18, 7, 32, 0.85)',
+                        neonPink: '#EC4899',
+                        neonPurple: '#a855f7',
+                        neonCyan: '#06b6d4',
+                        neonGreen: '#10B981',
+                        neonOrange: '#FF6600',
+                        neonBlue: '#0099FF',
+                        neonYellow: '#FFE600',
+                        neonRed: '#FF2A6D',
+                        neonIndigo: '#6366F1',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Background IT Futuristik Langsung dari URL Online */
+        body {
+            background-color: #090412;
+            background-image: url('https://lh3.googleusercontent.com/d/12uTupmh5eo2wno__xiODYDp_OKdAdECO');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        /* Overlay Gelap Transparan agar Teks Tetap Sangat Jelas Dibaca */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(9, 4, 18, 0.82);
+            z-index: -1;
+        }
+
+        /* Border & Glow Futuristik */
+        .glow-box {
+            background: rgba(18, 7, 32, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        .glow-box:hover {
+            border-color: rgba(236, 72, 153, 0.8);
+            box-shadow: 0 0 30px rgba(236, 72, 153, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, #ffffff 10%, #a855f7 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Frame Cyberpunk */
+        .cyber-frame {
+            position: relative;
+            border: 1px solid rgba(168, 85, 247, 0.5);
+            border-radius: 1rem;
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.25);
+        }
+        .cyber-frame::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: 20px; width: 50px; height: 3px;
+            background: #ec4899;
+            box-shadow: 0 0 10px #ec4899;
+        }
+        .cyber-frame::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; right: 20px; width: 50px; height: 3px;
+            background: #06b6d4;
+            box-shadow: 0 0 10px #06b6d4;
+        }
+    </style>
+</head>
+<body class="text-gray-100 font-sans selection:bg-neonPink selection:text-white relative min-h-screen">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-darkBg/90 backdrop-blur-md border-b border-purple-900/50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-wider text-gradient">Winda Kartika Ningsih </></a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-neonPink transition">About</a>
+                <a href="#skills" class="hover:text-neonPink transition">Skills</a>
+                <a href="#projects" class="hover:text-neonPink transition">Projects</a>
+                <a href="#contact" class="hover:text-neonPink transition">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center z-10 cyber-frame p-8 md:p-14 bg-darkBg/80 backdrop-blur-xl">
+            <span class="inline-block py-1.5 px-5 rounded-full bg-purple-950/80 border border-purple-500/60 text-neonPink text-xs md:text-sm font-mono tracking-widest uppercase mb-6 shadow-lg">
+                &lt;SOFTWARE ENGINEER PORTFOLIO /&gt;
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+                Winda Kartika Ningsih <span class="text-neonPink">&lt;/&gt;</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-semibold text-purple-300 mb-6">Software Engineer</p>
+            <p class="text-base md:text-lg text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                Membangun web aplikasi yang cepat, fungsional, dan mudah digunakan dengan fokus pada arsitektur kode yang bersih dan performa tinggi.
+            </p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <a href="#projects" class="px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 font-semibold text-white shadow-lg hover:opacity-90 transition transform hover:-translate-y-0.5">
+                    Lihat Proyek &gt;
+                </a>
+                <a href="#contact" class="px-8 py-3 rounded-full border border-purple-500/60 hover:border-pink-500 text-gray-200 font-semibold transition bg-cardBg backdrop-blur">
+                    Hubungi Saya
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-24 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-16 text-gradient">About Me</h2>
+        <div class="grid md:grid-cols-2 gap-10 items-stretch">
+            <!-- Ringkasan -->
+            <div class="p-8 rounded-2xl glow-box flex flex-col justify-between">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-pink-400 flex items-center gap-3">
+                        <i class="fa-solid fa-user-gear"></i> Ringkasan
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                        Saya adalah seorang software engineer yang memiliki passion dalam membangun aplikasi web yang responsive, efisien serta mudah digunakan. Berfokus pada arsitektur kode yang bersih (clean code), performa tinggi dan pengalaman pengguna yang optimal. Selalu antusias mempelajari teknologi baru dan menyelesaikan masalah kompleks dengan solusi digital yang tepat.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Core Skills -->
+            <div class="space-y-6 flex flex-col justify-between">
+                <div class="p-6 rounded-2xl glow-box">
+                    <h4 class="text-lg font-semibold text-purple-400 mb-2 flex items-center gap-3">
+                        <i class="fa-solid fa-laptop-code text-neonPink"></i> Web Application Development
+                    </h4>
+                    <p class="text-gray-300 text-sm">Membangun aplikasi web modern menggunakan Java Spring Boot ataupun Laravel.</p>
+                </div>
+                <div class="p-6 rounded-2xl glow-box">
+                    <h4 class="text-lg font-semibold text-purple-400 mb-2 flex items-center gap-3">
+                        <i class="fa-solid fa-server text-neonCyan"></i> Backend Engineering
+                    </h4>
+                    <p class="text-gray-300 text-sm">Manajemen database yang aman dan efisien.</p>
+                </div>
+                <div class="p-6 rounded-2xl glow-box">
+                    <h4 class="text-lg font-semibold text-purple-400 mb-2 flex items-center gap-3">
+                        <i class="fa-solid fa-puzzle-piece text-neonGreen"></i> Problem Solving 
+                    </h4>
+                    <p class="text-gray-300 text-sm">Menganalisis kebutuhan bisnis dan mentransformasikannya menjadi solusi perangkat lunak yang efektif.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-16 text-gradient">My Skills</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Frontend -->
+            <div class="p-6 rounded-2xl glow-box">
+                <div class="text-neonPink text-2xl mb-4"><i class="fa-solid fa-code"></i></div>
+                <h3 class="text-lg font-semibold mb-4 text-white">Frontend</h3>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li class="flex items-center gap-3"><i class="fa-brands fa-html5 text-orange-500 text-xl w-6"></i> HTML5</li>
+                    <li class="flex items-center gap-3"><i class="fa-brands fa-css3-alt text-blue-500 text-xl w-6"></i> CSS3</li>
+                    <li class="flex items-center gap-3"><i class="fa-brands fa-js text-yellow-400 text-xl w-6"></i> JavaScript</li>
+                </ul>
+            </div>
+
+            <!-- Backend -->
+            <div class="p-6 rounded-2xl glow-box">
+                <div class="text-neonPurple text-2xl mb-4"><i class="fa-solid fa-gears"></i></div>
+                <h3 class="text-lg font-semibold mb-4 text-white">Backend</h3>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li class="flex items-center gap-3"><i class="fa-brands fa-java text-red-500 text-xl w-6"></i> Java (Spring Boot)</li>
+                    <li class="flex items-center gap-3"><i class="fa-brands fa-python text-blue-400 text-xl w-6"></i> Python</li>
+                    <li class="flex items-center gap-3"><i class="fa-brands fa-php text-indigo-400 text-xl w-6"></i> PHP (Laravel, CodeIgniter)</li>
+                </ul>
+            </div>
+
+            <!-- Database -->
+            <div class="p-6 rounded-2xl glow-box">
+                <div class="text-neonCyan text-2xl mb-4"><i class="fa-solid fa-database"></i></div>
+                <h3 class="text-lg font-semibold mb-4 text-white">Database</h3>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-server text-blue-300 text-xl w-6"></i> PostgreSQL</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-database text-orange-400 text-xl w-6"></i> MySQL</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-table text-red-400 text-xl w-6"></i> Oracle</li>
+                </ul>
+            </div>
+
+            <!-- Tools & Methodology -->
+            <div class="p-6 rounded-2xl glow-box">
+                <div class="text-pink-400 text-2xl mb-4"><i class="fa-solid fa-toolbox"></i></div>
+                <h3 class="text-lg font-semibold mb-4 text-white">Tools & Methodology</h3>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li class="flex items-center gap-3"><i class="fa-brands fa-git-alt text-orange-600 text-xl w-6"></i> Git / GitHub</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-network-wired text-green-400 text-xl w-6"></i> REST API</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-16 text-gradient">My Projects</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            
+            <!-- Proyek 1 -->
+            <div class="rounded-2xl glow-box overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-48 overflow-hidden bg-purple-950/50 border-b border-purple-900/50 flex items-center justify-center text-purple-400">
+                        <img src="https://lh3.googleusercontent.com/d/1ihjWGX61m0M0LvGCw__jQtXw_mhAm0dU" alt="Analytical Dashboard Job Posting" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-pink-400">Analytical Dashboard Job Posting from Internet</h3>
+                        <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                            Dashboard analitik yang dirancang sebagai sumber analisa terkait jumlah bidang pekerjaan IT.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 rounded-full bg-purple-950 text-purple-300 border border-purple-700">Python</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-pink-950 text-pink-300 border border-pink-700">Banana Dashboard</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-700">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyek 2 -->
+            <div class="rounded-2xl glow-box overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-48 overflow-hidden bg-purple-950/50 border-b border-purple-900/50 flex items-center justify-center text-purple-400">
+                        <img src="https://lh3.googleusercontent.com/d/1xiaUk_SgNzOKpbs8xOTX6qnLuXh2W_9g" alt="Sistem Akademik Kampus" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-purple-400">Sistem Akademik Kampus (SIAKA)</h3>
+                        <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                            Aplikasi akademik kampus khusus untuk sekolah pascasarjana IPB University.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 rounded-full bg-yellow-950 text-yellow-300 border border-yellow-700">Laravel</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-blue-950 text-blue-300 border border-blue-700">HTML</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-red-950 text-red-300 border border-red-700">CSS</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-green-950 text-green-300 border border-green-700">Bootstrap</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-purple-950 text-purple-300 border border-purple-700">MySQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyek 3 -->
+            <div class="rounded-2xl glow-box overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-48 overflow-hidden bg-purple-950/50 border-b border-purple-900/50 flex items-center justify-center text-purple-400">
+                        <img src="https://lh3.googleusercontent.com/d/1EhN56cJlqecLEPz6fHxf69XBcE36WHPH" alt="Sistem Penunjang Operasional Divisi" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-cyan-400">Rekon Merchant</h3>
+                        <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                            Sistem aplikasi yang digunakan untuk rekonsiliasi merchant pada Divisi Operasional BNI.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 rounded-full bg-yellow-950 text-yellow-300 border border-yellow-700">Laravel</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-pink-950 text-pink-300 border border-pink-700">HTML</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-blue-950 text-blue-300 border border-blue-700">CSS</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-purple-950 text-purple-300 border border-purple-700">Bootstrap</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-700">MySQL</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="py-16 px-6 border-t border-purple-900/50 text-center bg-darkBg/90 backdrop-blur-md">
+        <div class="max-w-xl mx-auto">
+            <h2 class="text-2xl font-bold mb-4 text-gradient">Let's Connect</h2>
+            <p class="text-gray-400 text-sm mb-8">Tertarik berkolaborasi atau ingin berdiskusi? Jangan ragu untuk menghubungi saya.</p>
+            <div class="flex justify-center gap-6 text-2xl mb-8">
+                <a href="https://github.com/windakartikaningsih" target="_blank" class="text-gray-300 hover:text-pink-400 transition"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/winda-kartika-ningsih/" target="_blank" class="text-gray-300 hover:text-purple-400 transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:kartikawindak@gmail.com" class="text-gray-300 hover:text-cyan-400 transition"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p class="text-xs text-gray-500">&copy; Winda Kartika Ningsih. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
